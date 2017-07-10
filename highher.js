@@ -24,9 +24,11 @@ function myHigherFunction(){
     return outsideFunction;//()をつけると関数よび出しになってしまう。
 }
 　//（普通の）関数
-function outsideFunction(){
-    console.log('outsideFunction');    
+function outsideFunction(value){
+    console.log('value :' + value);    
 }
-let returnValue = myHigherFunction(/*outsideFunction*/);//関数呼び出しになってしまう。
-returnValue();
-// console.log(returnValue);
+
+// let returnValue = myHigherFunction(/*outsideFunction*/);//関数呼び出しになってしまう。
+// returnValue('引数だよ');
+
+myHigherFunction()('引数だよ');
